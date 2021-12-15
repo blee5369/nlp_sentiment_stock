@@ -1,0 +1,9 @@
+# bind to all interfaces
+network.host: 0.0.0.0
+
+# This is to prevent es from running bootstrap checks in fargate that will fail
+discovery.type: single-node
+
+# This remaps the location of the es data directory so that the Dockerfile can just add the .tar.gz
+path:
+  data: /usr/share/elasticsearch/geonames_index/
